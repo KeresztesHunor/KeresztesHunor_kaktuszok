@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Garamond, Verdana, sans-serif;
+}
+
+main {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+  display: grid;
+  grid-template-areas:
+    "h h"
+    "n n"
+    "as ar"
+    "f f";
+  gap: 10px;
+}
+
+header,
+nav,
+article,
+aside,
+footer {
+  border-radius: 5px;
+  border: 3px solid hsl(220, 100%, 50%);
+  background-color: hsl(200, 100%, 50%);
+}
+
+header {
+  grid-area: h;
+}
+
+header h1 {
+  text-align: center;
+  color: white;
+}
+
+nav {
+  background-color: hsl(220, 100%, 50%);
+  grid-area: n;
+}
+
+nav ul {
+  padding-left: 0;
+}
+
+nav ul li {
+  margin: 5px;
+  padding: 5px 15px;
+  display: inline;
+  border-radius: 5px;
+}
+
+nav ul li:hover {
+  background-color: hsl(200, 100%, 50%);
+}
+
+nav ul li a {
+  color: bisque;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+article {
+  grid-area: ar;
+}
+
+article h2 {
+  font-size: 15px;
+}
+
+article img {
+  width: 100%;
+  border-radius: 5px;
+  border: 3px solid hsl(220, 100%, 50%);
+}
+
+aside {
+  grid-area: as;
+}
+
+aside img {
+  padding: 5px;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  padding: 15px;
+  grid-area: f;
+}
+
+@media screen and (max-width: 700px) {
+  main {
+    grid-template-areas:
+      "h"
+      "n"
+      "ar"
+      "as"
+      "f";
+  }
+
+  nav ul li {
+    display: block;
+  }
+}
